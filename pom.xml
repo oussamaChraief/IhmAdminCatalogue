@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.orange.ihm.admin.catalogue</groupId>
+  <artifactId>ihm-admin-catalogue-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>IhmAdminCatalogue</name>
+  <description>Projet Parent</description>
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+	</parent>
+  <modules>
+  	<module>IhmAdminCatalogueDomain</module>
+  	<module>IhmAdminCataloguePersistance</module>
+  	<module>IhmAdminCatalogueWeb</module>
+  	<module>IhmAdminCatalogueConfig</module>
+  	<module>IhmAdminCatalogueService</module>
+  </modules>
+  
+  <dependencyManagement>
+	<dependencies>  
+	  	<dependency>
+	  		<groupId>com.orange.ihm.admin.catalogue</groupId>
+	 		<artifactId>ihm-admin-catalogue-domain</artifactId>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>com.orange.ihm.admin.catalogue</groupId>
+	 		<artifactId>ihm-admin-catalogue-persistance</artifactId>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>com.orange.ihm.admin.catalogue</groupId>
+	  		<artifactId>ihm-admin-catalogue-config</artifactId>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>com.orange.ihm.admin.catalogue</groupId>
+	 		<artifactId>ihm-admin-catalogue-web</artifactId>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>com.orange.ihm.admin.catalogue</groupId>
+	 		<artifactId>ihm-admin-catalogue-service</artifactId>
+	  	</dependency>
+	  			
+  	</dependencies>
+  </dependencyManagement>
+  <dependencies>
+  	<dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-devtools</artifactId>
+	</dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    
+  </dependencies>
+</project>
